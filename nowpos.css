@@ -1,0 +1,94 @@
+/* ボタンは角を丸める */
+button {
+    border-radius: 5px;
+}
+
+/* leaflet.js を利用したマップの表示領域定義 */
+#map {
+    width: 100%;
+    height: 300px;
+}
+
+/* 位置情報取得開始・一時停止ボタン */
+#getpos-start, #getpos-stop {
+    width: 50%;
+    height: 3em;
+    font-size: 16pt;
+    margin: 0.2em auto;
+}
+
+/* 位置情報取得操作ボタン・共有ボタンエリア内の整列指定 */
+#geoloc-control-section, #share-section {
+    display: flex;
+    margin: 0.5em 0;
+    gap: 0 0.8em;
+}
+
+/* 位置情報共有ボタンに共通の書式 */
+#copy-i-am-at-string, #tweet, #toot, #note {
+    width: 25%;
+    height: 2.4em;
+    font-size: 12pt;
+    margin: 0.2em auto;
+}
+
+/* 各ボタンの状態表示定義 */
+/* ボタン：デフォルト表示 */
+.default {
+    background-color: #E0E0E0;
+    color: black;
+}
+
+/* ボタン：位置情報取得継続中 */
+.monitoring {
+    background-color: red;
+    color: white;
+}
+
+/* 共有ボタン：Tweet（有効状態） */
+#tweet:enabled {
+    color: white;
+    background-color: #1DA1F2;
+    border: 2px outset #146EA5;
+}
+
+/* 共有ボタン：Tweet（無効状態・位置情報取得前） */
+#tweet:disabled {
+    color: #FCFCFC;
+    background-color: #7D9BBC;
+    border: 1px solid #5B718A;
+}
+
+/* 共有ボタン：MastodonへのToot（有効状態） */
+#toot:enabled {
+    color: white;
+    background-color: #6364FF;
+    border: 2px outset #3D3E9E;
+}
+
+/* 共有ボタン：MastodonへのToot（無効状態・位置情報取得前） */
+#toot:disabled {
+    color: #FCFCFC;
+    background-color: #7870A6;
+    border: 1px solid #36378C;
+}
+
+/* 共有ボタン：MisskeyへのNote（有効状態） */
+#note:enabled {
+    color: white;
+    background-color: #97CB00;
+    border: 2px outset #4D6700;
+}
+
+/* 共有ボタン：MisskeyへのNote（無効状態・位置情報取得前） */
+#note:disabled {
+    color: #FCFCFC;
+    background-color: #9FAE72;
+    border: 1px solid #626C47;
+}
+
+/* 現在地共有文言フォーマット表示部分 */
+#i-am-at-string {
+    width: 100%;
+    word-break: break-all;
+}

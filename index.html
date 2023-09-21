@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta name="robots" content="noindex,nofollow" />
+        <link rel="stylesheet" href="nowpos.css" />
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+        <title>NowPos</title>
+    </head>
+    <body>
+        <h1>NowPos</h1>
+        <div id="geoloc-control-section">
+            <input id="getpos-start" class="default" type="button" value="位置取得開始" />
+            <input id="getpos-stop" type="button" value="一時停止" />
+        </div>
+        <div id="results">
+            <h2>結果</h2>
+            <p id="i-am-at-string"></p>
+            <div id="share-section">
+                <input id="copy-i-am-at-string" type="button" value="Copy" disabled />
+                <input id="tweet" type="button" value="Twitter" disabled />
+                <input id="toot" type="button" value="Mastodon" disabled />
+                <input id="note" type="button" value="Misskey" disabled />
+            </div>
+            <p id="status"></p>
+            <p id="nearest-pos"></p>
+            <p>
+                <a id="map-link">ここにOpenStreetMapのリンクが表示されます</a>
+            </p>
+            <div id="map">
+            </div>
+        </div>
+        <script type="module" src="landmarks.js"></script>
+        <script type="module" src="nowpos.js"></script>
+    </body>
+</html>
